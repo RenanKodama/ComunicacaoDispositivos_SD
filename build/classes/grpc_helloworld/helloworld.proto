@@ -1,0 +1,36 @@
+// Copyright 2015, Google Inc.
+// All rights reserved.
+
+
+syntax = "proto3";
+
+// interface de serviço
+service Greeter {
+  rpc AdicionarLivro (Livro) returns (Resposta) {}
+  rpc RemoverLivro (Titulo) returns (Resposta) {}
+  rpc ListarLivros (Request) returns (Resposta) {} 
+
+}
+
+message Livro {
+	string titulo = 1;
+	string autor = 2;
+	string qtdPag = 3;
+	string genero = 4;	
+	string ano = 5;
+}
+
+message Titulo{
+  string titulo = 1;
+}
+
+message Resposta {
+	string message = 1;
+}
+
+message Request{
+	string message = 1;
+}
+
+
+

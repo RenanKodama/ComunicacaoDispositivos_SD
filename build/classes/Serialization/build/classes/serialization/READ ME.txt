@@ -1,0 +1,16 @@
+Requisitos :
+Instalar ->
+pip install grpcio
+pip install grpcio-tools
+
+1. Execução
+	a) Primeiramente iniciar o servidor por meio do comando:
+	javac server.java
+	java server
+	b) Após o item a, executar o cliente através do comando:
+	javac client.java
+	java client
+
+2. Bibliotecas utilizadas
+	 GRPC
+

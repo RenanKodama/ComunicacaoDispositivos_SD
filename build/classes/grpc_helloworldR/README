@@ -1,0 +1,23 @@
+
+UNIVERSIDADE TECNOLOGICA FEREAL DO PARANA
+Sistemas Distribuidos
+
+Alunos: 
+	Renan Kodama Rodrigues 1602098
+	Mateus Tomoo Yonemoto Peixoto 1602055
+
+
+Necessário Instalar:
+	pip3.4 install grpcio
+	pip3.4 install grpcio-tools
+
+
+Comando para compilar os arquivos e gerar o pb2.pyc e grpc.py 
+	$python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. helloworld.proto 
+	OBS: necessário estar no diretório do projeto
+
+Passos:
+	1- iniciar o servidor
+		$python greeter_server.py			
+	2 - iniciar cliente
+		$python greeter_client.py

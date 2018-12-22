@@ -1,0 +1,33 @@
+// Copyright 2015, Google Inc.
+// All rights reserved.
+
+
+syntax = "proto3";
+
+// interface de serviço
+service Greeter {
+  rpc AdicionarContato (Contato) returns (Resposta) {}
+  rpc RemoverContato (Nome) returns (Resposta) {}
+  rpc ListarContatos (Request) returns (Resposta) {} 
+
+}
+
+message Contato {
+	string nome = 1;
+	string telefone = 2;
+}
+
+message Nome{
+  string nome = 1;
+}
+
+message Resposta {
+	string message = 1;
+}
+
+message Request{
+	string message = 1;
+}
+
+
+
